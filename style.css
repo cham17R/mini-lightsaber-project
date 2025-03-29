@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0d1b2a;
+    transition: background 0.5s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+}
+
+.ti{
+    color: #999998;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    color: gold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.btn1{
+    width: 120px;
+    border-radius: 40px;
+    height: 60px;
+    text-align: center;
+    margin: 50px;
+    background-color: grey;
+    font-family: "Orbitron", sans-serif;
+}
+.btn1:hover{
+    background: #e0e1dd;
+    color:rgb(61, 206, 255) ;
+    
+}
+.btn1:active{
+    display: hiddem
+    ;
+}
+
+.reset{
+    width: 120px;
+    border-radius: 40px;
+    height: 60px;
+    text-align: center;
+    margin: 50px;
+    background-color: rgb(199, 199, 199);
+    
+    font-family: "Orbitron", sans-serif;
+
+}
+
+.reset:hover{
+    background: whitesmoke;
+    color: goldenrod;
+}
+   
+
+.btn2{
+    width: 120px;
+    border-radius: 40px;
+    height: 60px;
+    text-align: center;
+    margin: 50px;
+    background-color: rgb(68, 68, 68);
+    font-family: "Orbitron", sans-serif;
+}
+.btn2:hover{
+    background: black;
+    color:rgb(176, 0, 0) ;
+}
+
+.mainBox {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.lightsaber-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+
+.lightsaber{
+    background-color: #e0e1dd;
+    height: 800px;
+    width: 20px;
+    border-radius: 10px 10px 0 0;
+    display: none;
+   
+    
+}
+
+.handle {
+    background: #484848;
+    height: 150px;
+    width: 35px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.handle-end {
+    background: #343434;
+    height: 30px;
+    width: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+img{
+    height: 800px;
+    display: inline-flex;
+    
+    display: none;
+    
+}
+.o{
+    width: 400px;
+    margin: px;
+}
+.a{
+    width: 400px;
+}
+
+footer{
+    border: 10px black;
+    background-color: transparent;
+    text-align: center;
+    color: gold;
+    font-family: "Orbitron", sans-serif;
+}
+.extend {
+    animation: extendBlade 0.8s ease-in-out forwards;
+}
+
+.retract {
+    animation: retractBlade 1s ease-in-out forwards;
+    animation-delay: 0.1s;
+}
+
+
+.jedi-pulse {
+    animation: jediPulse 2.5s infinite alternate;
+}
+
+.sith-pulse {
+    animation: sithPulse 4.5s infinite alternate;
+}
+@keyframes jediPulse {
+    0% {
+        box-shadow: 0 0 20px #87CEEB, 0 0 40px #87CEEB;
+    }
+    100% {
+        box-shadow: 0 0 20px #87CEEB, 0 0 60px rgba(135, 206, 235, 0.6);
+    }
+}
+
+@keyframes sithPulse {
+    0% {
+        box-shadow: 0 0 20px #FF0000, 0 0 40px #8B0000;
+    }
+    100% {
+        box-shadow: 0 0 20px #FF0000, 0 0 60px rgba(139, 0, 0, 0.6);
+    }
+}
+@keyframes extendBlade {
+    0% {
+        height: 0;
+      
+    }
+    100% {
+        height: 60vh;
+    }
+}
+
+@keyframes retractBlade {
+    0% {
+        height: 60vh;
+        opacity: 1;
+        box-shadow: inherit;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+        box-shadow: none;
+        transform: scaleY(0.8); 
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    .lightsaber {
+        width: 3vw;
+        height: 70vh;
+    }
+    .handle {
+        height: 12vh;
+    }
+    img {
+        height: 50vh;
+        max-width: 300px;
+    }
+    .btn1, .btn2, .reset {
+        width: 100px;
+        height: 50px;
+    }
+    .btn1 h3, .btn2 h3 {
+        font-size: 1rem;
+    }
+    .ti h1 {
+        font-size: 1.5rem;
+    }
+    .ti h3 {
+        font-size: 1rem;
+    }
+    .ti h5 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .button {
+        flex-direction: row;
+    }
+    .mainBox {
+        flex-direction: column;
+    }
+    .lightsaber {
+        width: 5vw;
+        height: 80vh;
+    }
+    img {
+        height: 40vh;
+        max-width: 200px;
+    }
+    .btn1, .btn2, .reset {
+        width: 85px;
+        height: 45px;
+        margin: 10px;
+    }
+}
